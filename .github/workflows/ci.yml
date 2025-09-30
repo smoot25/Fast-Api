@@ -46,17 +46,17 @@ jobs:
       - name: Run Mypy
         run: poetry run mypy .
 
-  # mypy와 test는 병렬구조를 사용하여 시간을 단축시키자!!
+  # mypy와 test는 병렬구조를 사용하여 시간을 단축시키자!
   test:
     # 전체 테스트 실행
     runs-on: ubuntu-22.04
     steps:
       - name: Check out the codes
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Setup python environment
         id: setup-python
-        uses: actions/setup=python@v2
+        uses: actions/setup-python@v2
         with:
           python-version: '3.13'
 
