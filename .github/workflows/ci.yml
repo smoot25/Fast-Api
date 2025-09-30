@@ -46,7 +46,7 @@ jobs:
       - name: Run Mypy
         run: poetry run mypy .
 
-  # mypy와 test는 병렬구조를 사용하여 시간을 단축시키자!!
+  # mypy와 test는 병렬구조를 사용하여 시간을 단축시키자!
   test:
     # 전체 테스트 실행
     runs-on: ubuntu-22.04
