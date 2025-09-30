@@ -33,14 +33,14 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-root
 
+      # black의 규칙을 잘 지켰는지 체크를 하게됨.(수정을 하지는 않는다.)
       - name: Run Black
         run: poetry run black . --check
-        # black의 규칙을 잘 지켰는지 체크를 하게됨.(수정을 하지는 않는다.)
 
+      # 위와 같은 의미로 --fix를 이용한 수정을 하지 않는다.
       - name: Run Ruff
         run:
           poetry run ruff check --select I
-          # 위와 같은 의미로 --fix를 이용한 수정을 하지 않는다.
           poetry run ruff check
 
       - name: Run Mypy
